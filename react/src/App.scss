@@ -61,6 +61,18 @@ html {
         &-close {
             &.left {
                 margin-left: -230px;
+                + .App-container {
+                    margin-left: 60px;
+                }
+                ul,li{
+                    transition: all 300ms ease-in-out 100ms;
+                    max-width: 10px;
+                    opacity: 0;
+                }
+                + h3, .title {
+                    opacity: 0;
+                    text-align: left;
+                }
             }
             &.right {
                 margin-right: -230px;
@@ -78,9 +90,15 @@ html {
             padding: 8px;
             margin: 8px;
             border-radius: 5px;
+            cursor: pointer;
+            transition: all 100ms linear 10ms;
+            &:hover{
+                background-color:bisque ;
+            }
         }
     }
     h3, .title {
+        transition: all 300ms ease-in-out 100ms;
         display: flex;
         margin: 0;
         padding-top: 10px;
@@ -119,29 +137,24 @@ html {
             .right {
                 button {
                     right: auto;
-                    left: 0;
+                    left: 10px;
                 }
-                    ul,
-                    h3 {
-                        padding-left: 60px;
-                    }
-                }
-                .left {
-                    button {
+            }
+            .left {
+                button {
                     left: auto;
-                    right: 0;
+                    right: 10px;
                 }
             }
             .sidebar-close {
-                + .App-container {
-                    margin-left: 60px;
-                }
                 button {
                     color: royalblue;
                     box-shadow: 0 1px 4px #282c34;
                 }
-                li {
-                    max-width: 10px;
+
+                ul,
+                h3 {
+                    padding-left: 60px;
                 }
             }
         }
