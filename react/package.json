@@ -1,6 +1,7 @@
 {
     "private": true,
     "dependencies": {
+        "@types/styled-components": "^5.1.24",
         "material-icons": "^1.10.7",
         "node-sass": "^7.0.1",
         "react": "^17.0.2",
