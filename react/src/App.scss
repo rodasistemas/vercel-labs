@@ -1,17 +1,45 @@
 body,
 html {
-    height: calc(100% - 5vh);
+    height: 100%;
     display: grid;
-    position: relative;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
 }
+
 .App {
-    text-align: center;
     height: 100%;
     width: 100%;
-    display: contents;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    padding: 0;
+    position: relative;
+    overflow: auto;
+    &-header {
+        background-color: #282c34;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: white;
+    }
+    &-container{
+        margin:0;
+        transition: margin 300ms ease-in-out 100ms;
+        &.left{
+            margin-left: 290px;
+        }
+    }
 }
 .App-sidebar {
-    max-width: 260px;
+    background-color: white;
+    width: 260px;
     border-right: 1px solid white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     height: 100%;
@@ -20,18 +48,30 @@ html {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 10px 5px;
-    transition: margin 300ms ease-in-out 100ms;
-    position: relative;
+    transition: all 300ms ease-in-out 100ms;
+    position: fixed;
+    margin: 0;
+    &.left {
+        left: 0;
+    }
+    &.right {
+        right: 0;
+    }
     &.sidebar {
         &-close {
-            margin-left: -230px;
+            &.left {
+                margin-left: -230px;
+            }
+            &.right {
+                margin-right: -230px;
+            }
         }
     }
     ul {
         padding: 0;
         margin: 0;
         width: 100%;
-        li{
+        li {
             list-style: none;
             display: flex;
             border: 1px solid rgba(0, 0, 0, 0.1);
@@ -40,27 +80,29 @@ html {
             border-radius: 5px;
         }
     }
-    h3{
-        display: flexbox;
+    h3, .title {
+        display: flex;
         margin: 0;
-        padding: 0;
-        padding-bottom: 8px;
+        padding-top: 10px;
+        padding-bottom: 24px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
         clear: both;
+        align-items: center;
+        justify-content: center;
 
     }
 
     & button {
         position: absolute;
-        right: 0;
-        top: 0;
+        margin-top: auto;
+        margin-bottom: auto;
         width: 30px;
         height: 30px;
         display: flex;
         border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0;
-        margin: 2px;
+
         align-items: center;
         justify-content: center;
         border-radius: 5px;
@@ -74,7 +116,26 @@ html {
             box-shadow: 0 1px 4px #282c34;
         }
         @at-root {
+            .right {
+                button {
+                    right: auto;
+                    left: 0;
+                }
+                    ul,
+                    h3 {
+                        padding-left: 60px;
+                    }
+                }
+                .left {
+                    button {
+                    left: auto;
+                    right: 0;
+                }
+            }
             .sidebar-close {
+                + .App-container {
+                    margin-left: 60px;
+                }
                 button {
                     color: royalblue;
                     box-shadow: 0 1px 4px #282c34;
@@ -95,17 +156,6 @@ html {
     .App-logo {
         animation: App-logo-spin infinite 20s linear;
     }
-}
-
-.App-header {
-    background-color: #282c34;
-    min-height: 10vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
 }
 
 .App-link {
