@@ -1,4 +1,9 @@
-const Header: React.FC<any> = (props) => {
+interface IHeader{
+    children?: React.ReactChild;
+    className?: string;
+}
+
+const Header: React.FC<IHeader> = (props) => {
   const { children } = props
   return <header {...props}>{children}</header>
 }
