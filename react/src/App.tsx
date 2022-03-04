@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import {Header, Sidebar} from "./components/Layout";
 
 const App:React.FC<any> = () => {
@@ -8,7 +8,23 @@ const App:React.FC<any> = () => {
 
         React
       </Header>
-      <Sidebar className="App-sidebar">Teste</Sidebar>
+      <Sidebar className="App-sidebar" title="Menu">
+          <ul>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+              <li>Item</li>
+          </ul>
+      </Sidebar>
     </div>
   );
 }
