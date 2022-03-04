@@ -1,23 +1,14 @@
-import './App.scss';
-import {Header, Sidebar} from "./components/Layout";
-import {Outlet} from "react-router-dom";
-import Navlink from './routes/Navlink';
+import 'assets/styles/App.scss'
+import Template from "./Template"
+import {Outlet} from "react-router-dom"
 
 
 
-const App:React.FC<any> = () => {
+
+const App:React.FC = (props) => {
   return (
     <div className="App">
-      <Header className="App-header">
-
-        AppLayout Header
-      </Header>
-      <Sidebar className="App-sidebar left" title="AppLayout">
-          <Navlink links={[
-              {name: 'home', url:'/'},
-              {name: 'about', url:'about'}
-          ]} />
-      </Sidebar>
+      <Template />
       <Outlet />
     </div>
   );
