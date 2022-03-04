@@ -1,5 +1,9 @@
 import './App.scss';
-import {Header, Sidebar, Container} from "./components/Layout";
+import {Header, Sidebar} from "./components/Layout";
+import {Outlet} from "react-router-dom";
+import Navlink from './routes/Navlink';
+
+
 
 const App:React.FC<any> = () => {
   return (
@@ -9,25 +13,12 @@ const App:React.FC<any> = () => {
         AppLayout Header
       </Header>
       <Sidebar className="App-sidebar left" title="AppLayout">
-          <ul>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-              <li>Item</li>
-          </ul>
+          <Navlink links={[
+              {name: 'home', url:'/'},
+              {name: 'about', url:'about'}
+          ]} />
       </Sidebar>
-      <Container className="App-container left">
-          AppLayout Container
-      </Container>
+      <Outlet />
     </div>
   );
 }

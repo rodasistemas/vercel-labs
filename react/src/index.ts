@@ -1,6 +1,6 @@
 import './index.css'
-import App from './App'
+import Router from './routes/Router'
 import ReactDOM from 'react-dom'
 import { createElement } from 'react'
 
-ReactDOM.render(createElement(App), document.getElementById('root'))
+ReactDOM.render(createElement(Router), document.getElementById('root'))
