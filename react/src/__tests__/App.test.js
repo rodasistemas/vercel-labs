@@ -21,11 +21,20 @@ const server = setupServer(
           render(<App/>)
           expect(screen.getByRole('banner')).toBeInTheDocument();
       })
-      it('sidebar event',()=>{
+      it('sidebar state',()=>{
           render(<Sidebar/>)
+          expect(screen.getByRole('sidebar')).toHaveTextContent(/menu/i)
+        })
+        it('sidebar event',()=>{
+          const {container} = render(<Sidebar className="test"/>);
           const buttonMock = screen.getByRole('button');
           const eventMock = fireEvent(buttonMock,new MouseEvent('click',{bubbles: true, cancelable:true}));
-          expect(eventMock).toBe(true)
-          expect(screen.getByRole('sidebar')).toHaveTextContent(/menu/i)
+          expect(eventMock).toBeTruthy()
+          expect(container).toMatchSnapshot()
+      })
+      it('snapshot',()=>{
+          const {container} = render(<App/>);
+          // eslint-disable-next-line testing-library/no-debugging-utils
+          expect(container).toMatchSnapshot()
       })
   })

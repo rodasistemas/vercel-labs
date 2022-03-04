@@ -1,214 +1,104 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`[APP] snapshot 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="App"
-      >
-        <header
-          class="App-header"
-        >
-          AppLayout Header
-        </header>
-        <aside
-          class="App-sidebar left sidebar-open"
-          role="sidebar"
-        >
-          <h3
-            class="sidebar-title"
-          >
-            AppLayout
-            <button
-              class="sidebar-toggle"
-            >
-              <span
-                class="material-icons"
-              >
-                menu
-              </span>
-            </button>
-          </h3>
-          <ul>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-            <li>
-              Item
-            </li>
-          </ul>
-        </aside>
-        <div
-          class="App-container left"
-          role="container"
-        >
-          AppLayout Container
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="App"
+exports[`[App] sidebar event 1`] = `
+<div>
+  <aside
+    class="test sidebar-close"
+    role="sidebar"
+  >
+    <h3
+      class="sidebar-title"
     >
-      <header
-        class="App-header"
+      <button
+        class="sidebar-toggle"
       >
-        AppLayout Header
-      </header>
-      <aside
-        class="App-sidebar left sidebar-open"
-        role="sidebar"
-      >
-        <h3
-          class="sidebar-title"
+        <span
+          class="material-icons"
         >
-          AppLayout
-          <button
-            class="sidebar-toggle"
-          >
-            <span
-              class="material-icons"
-            >
-              menu
-            </span>
-          </button>
-        </h3>
-        <ul>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-          <li>
-            Item
-          </li>
-        </ul>
-      </aside>
-      <div
-        class="App-container left"
-        role="container"
+          menu
+        </span>
+      </button>
+    </h3>
+  </aside>
+</div>
+`;
+
+exports[`[App] snapshot 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      AppLayout Header
+    </header>
+    <aside
+      class="App-sidebar left sidebar-open"
+      role="sidebar"
+    >
+      <h3
+        class="sidebar-title"
       >
-        AppLayout Container
-      </div>
+        AppLayout
+        <button
+          class="sidebar-toggle"
+        >
+          <span
+            class="material-icons"
+          >
+            menu
+          </span>
+        </button>
+      </h3>
+      <ul>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+        <li>
+          Item
+        </li>
+      </ul>
+    </aside>
+    <div
+      class="App-container left"
+      role="container"
+    >
+      AppLayout Container
     </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+  </div>
+</div>
 `;
