@@ -31,6 +31,7 @@ html {
     }
     &-container{
         margin:0;
+        padding: 20px;
         transition: margin 300ms ease-in-out 100ms;
         &.left{
             margin-left: 290px;
@@ -40,7 +41,6 @@ html {
 .App-sidebar {
     background-color: white;
     width: 260px;
-    border-right: 1px solid white;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     height: 100%;
     display: flex;
@@ -114,7 +114,7 @@ html {
             content:'';
             display: block;
             width: 100%;
-            height: 10vh;
+            height: 70px;
             background-color: #282c34;
             position: absolute;
             top:0;
