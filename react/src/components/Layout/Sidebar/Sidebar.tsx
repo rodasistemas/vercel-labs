@@ -9,10 +9,11 @@ const Sidebar:React.FC<any> = (props) => {
     }
     return (
         <aside className={`${props.className} sidebar-${togglesb ? 'open' : 'close'}`}>
-            <h3 className="sidebar-title">{props.title}</h3>
+            <h3 className="sidebar-title">{props.title}
             <button className="sidebar-toggle" onClick={handleToggle}>
                 <span className="material-icons">menu</span>
             </button>
+            </h3>
             { children }
             </aside>
     )

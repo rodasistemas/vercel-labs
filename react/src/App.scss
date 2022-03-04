@@ -101,20 +101,33 @@ html {
         transition: all 300ms ease-in-out 100ms;
         display: flex;
         margin: 0;
+        padding: 0;
         padding-top: 10px;
         padding-bottom: 24px;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
         clear: both;
         align-items: center;
+        color: white;
         justify-content: center;
+        &:before{
+            content:'';
+            display: block;
+            width: 100%;
+            height: 10vh;
+            background-color: #282c34;
+            position: absolute;
+            top:0;
+            right: 0;
+            left: 0;
+            bottom:0;
+            z-index: -1;
+        }
 
     }
 
     & button {
         position: absolute;
-        margin-top: auto;
-        margin-bottom: auto;
         width: 30px;
         height: 30px;
         display: flex;
