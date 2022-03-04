@@ -110,7 +110,7 @@ html {
         clear: both;
         align-items: center;
         color: white;
-        justify-content: center;
+
         &:before{
             content:'';
             display: block;
@@ -204,4 +204,7 @@ html {
     height: 100%;
     position: absolute;
     background-color: white;
+}
+.logo {
+    max-height: 50px;
 }

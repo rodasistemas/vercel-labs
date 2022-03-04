@@ -22,6 +22,9 @@
     },
     "extends": "./tsconfig.paths.json",
     "include": [
-      "src"
+      "src",
+      "src/components",
+      "src/assets",
+      "src/custom.d.ts"
     ]
   }
