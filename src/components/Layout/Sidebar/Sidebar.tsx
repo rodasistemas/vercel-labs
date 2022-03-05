@@ -9,6 +9,8 @@ const Sidebar:React.FC<any> = (props) => {
         setTogglesb(!togglesb);
     }
     return (
+
+        // eslint-disable-next-line jsx-a11y/aria-role
         <aside className={`${props.className} sidebar-${togglesb ? 'open' : 'close'}`} role="sidebar">
             <h3 className="sidebar-title">
                 <img alt="logo" src={Logo} className="logo" />
