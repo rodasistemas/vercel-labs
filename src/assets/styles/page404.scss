@@ -16,8 +16,9 @@
 
 .four_zero_four_bg {
     background-image: url(../images/animate404.gif);
-    height: 400px;
+    height: calc(100vh - 300px);
     background-position: center;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
